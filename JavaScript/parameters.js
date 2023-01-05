@@ -17,3 +17,28 @@ const restParam = (a, b, ...rest) => { // rest parameters returns the array of p
 }
 
 restParam(1, 2, 3, 4, 5, 6); // Passing Arguement
+
+// Passing Array and Object as parameters & destructuring it
+
+const object = {
+    name : 'foo',
+    age : 36,
+    hobbie : 'bar',
+}
+
+const array = [
+    "Akashi",
+    "Pawan",
+    "Raj"
+]
+
+const destructuringFunction = (object, array) => {
+    console.log(object.name)
+
+    for(let i of array) {
+        console.log(i)
+    }
+}
+
+destructuringFunction(object, array)
+

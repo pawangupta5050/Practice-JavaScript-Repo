@@ -16,6 +16,10 @@ for (let i of string){
     console.log(i)
 }
 
+const stringTrim = string.trim();
+
+console.log("Trimmed string is - ",stringTrim)
+
 const output = string.slice(-5, -1)
 
 const output1 = string.slice(0)
