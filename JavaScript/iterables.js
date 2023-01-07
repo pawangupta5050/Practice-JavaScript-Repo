@@ -18,3 +18,16 @@ mapObject.set("Age", 21 ) // ("Key", "Value")
 mapObject.set(1, "25") 
 
 console.log(mapObject)
+
+
+// Optional Chaining
+
+const optionalChaining = {
+    Name : "Pawan",
+    age : 21
+}
+
+console.log(optionalChaining.Name) // Pawan
+console.log(optionalChaining.FullName) // undefined
+console.log(optionalChaining.FullName.age) // error 
+console.log(optionalChaining.FullName?.age) // undefined (To avoid errors optional chaining comes into existence)
