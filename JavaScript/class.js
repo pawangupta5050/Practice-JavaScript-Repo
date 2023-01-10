@@ -16,31 +16,44 @@ console.log(userPawan.myname)
 
 // Class 
  
-class OnlineStore {
-    constructor(custName, custType, custJoining) { // Instance of a class
-        this.custName = custName;
-        this.custType = custType;
-        this.custJoining = custJoining;
+class empData {
+    constructor(name, designation, age, number) {
+        this.name = name;
+        this.designation = designation;
+        this.age = age;
+        this.number = number;
     }
 
-    isPremium() {
-        return this.custType === "Premium";
-    }
-}
-
-const cust1 = new OnlineStore("Pawan", "Premium", "12/1/2023")
-
-console.log(cust1.isPremium())
-
-class Customer extends OnlineStore { // Javascript inheritence 
-    constructor(custName, custType, custJoining, custMobile){
-        super(custName, custType, custJoining)
-        this.custMobile = custMobile;
+    isDeveloper() {
+        return this.designation === 'Developer';
     }
 
-    custMobile() {
-        return this.custMobile;
+    isAdult() {
+        return this.age >= 18;
+    }
+
+    mobileNumber() {
+        return this.number;
     }
 }
 
-const customer2 = new Customer("Akash")
+const emp1 = new empData("Pawan", "QC", 15, 185254649)
+
+console.log(emp1.mobileNumber())
+
+class newClass extends empData {
+    constructor(name, designation, age, number, exp){
+        super(name, designation, age, number);
+        this.exp = exp;
+    }
+
+    isExperienced (){
+        return this.exp >= 5? "Experienced" : "Fresher";
+    }
+}
+
+const emp2 = new newClass("Akash", "Developer", 18, 7412589630, 3)
+
+console.log(emp2.isExperienced())
+
+console.log(emp2.isDeveloper())
