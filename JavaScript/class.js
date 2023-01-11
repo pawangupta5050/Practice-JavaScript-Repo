@@ -7,12 +7,12 @@ const newFunction = function(name, age) {
 }
 
 newFunction.prototype.myname = function() {
-    console.log(`My name is ${this.name}`);
+   return `My name is ${this.name}`;
 }
 
 const userPawan =  new newFunction("Pawan", 21)
 const userAkash =  newFunction("Akash", 18)
-console.log(userPawan.myname)
+console.log(userPawan.myname())
 
 // Class 
  
@@ -41,9 +41,9 @@ const emp1 = new empData("Pawan", "QC", 15, 185254649)
 
 console.log(emp1.mobileNumber())
 
-class newClass extends empData {
-    constructor(name, designation, age, number, exp){
-        super(name, designation, age, number);
+class newClass extends empData { // Inheritance from parent class
+    constructor(name, designation, age, number, exp){ // adding a proprerty to the constructor
+        super(name, designation, age, number); // Accessing the property from the Parent Constructor
         this.exp = exp;
     }
 
@@ -57,3 +57,35 @@ const emp2 = new newClass("Akash", "Developer", 18, 7412589630, 3)
 console.log(emp2.isExperienced())
 
 console.log(emp2.isDeveloper())
+
+// Get and Set in Class Methods
+
+class Person {
+    constructor(firstName, lastName, age){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.age = age;
+    }
+
+    get fullname() { // It makes a Method act as a Property inside a class
+        return `${this.firstName} ${this.lastName}`;
+    }
+
+    set fullname(fullname) {
+        const [firstname, lastName] = fullname.split(' '); // Splut Method separates the Sentence from the space and returns it into an array
+        this.firstName = firstname;
+        this.lastName = lastName;
+    }
+
+    static personInfo() { // Static methods acts as a Property and does not require any Instance when called
+        return `This is a person Info`;
+    }
+}
+
+const pawanGupta = new Person("Pawan", "Gupta", 21)
+
+pawanGupta.fullname = "Akash Gupta"
+
+console.log(pawanGupta)
+
+console.log(Person.personInfo()) // Calling Function directly from a Class
