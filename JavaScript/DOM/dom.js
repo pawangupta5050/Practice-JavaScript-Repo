@@ -1,8 +1,14 @@
 // getElementById - Get any element through ID
-const myName = 'Pawan Gupta'
+const navItems = ["Logo", "Home", "About us", "Services", "Contact Us"]
 
-const heading1 = document.getElementById('heading')
+const nav = document.querySelector('#nav')
 
-heading1.innerHTML = `Hello ${myName}`
+nav.innerHTML = "<div>Hello</div>"
 
-console.log(heading1.innerHTML)
+navItems.map((e) => {
+    console.log(e)
+    nav.innerHTML += `<div><a >${e}</a></div>`
+})
+
+console.log(nav)
+
