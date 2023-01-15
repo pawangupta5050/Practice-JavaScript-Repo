@@ -37,7 +37,7 @@ nav div {
 .main {
     border: 1px solid rgb(197, 18, 18);
     width: 100vw;
-    height: 50vh;
+    height: 70vh;
     /* text-align: center; */
     display: flex;
     flex-direction: row;
@@ -49,8 +49,8 @@ main div {
     background-color: blanchedalmond;
     margin-left: 5px;
     padding-left: 10px;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
 }
 
 

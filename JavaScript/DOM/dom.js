@@ -2,7 +2,7 @@
 const navItems = ["Logo", "Home", "About us", "Services", "Contact Us"]
 const block = document.querySelector('.main')
 console.log(block)
-const blocks = 6;
+const blocks = 1;
 
 const nav = document.querySelector('#nav')
 
