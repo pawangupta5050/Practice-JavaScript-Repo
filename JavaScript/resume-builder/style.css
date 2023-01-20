@@ -46,17 +46,21 @@ header {
 }
 
 .main {
+    background-color: #00b894;
+}
+
+.main-div {
     height: 80vh;    
     width: 60%;
     border: 1px solid red;
     display: flex;
     padding: 20px;  
-    background-color: #00b894;
+    background-color: #ffffff;
 }
 
-.main .left {
+.main-div .left {
     border: 2px solid black;
-    width: 50%;
+    width: 60%;
 }
 
 .main .left .name {
@@ -65,7 +69,7 @@ header {
 
 .main .right {
     border: 2px solid black;
-    width: 50%;
+    width: 40%;
 }
 
 .footer {   
