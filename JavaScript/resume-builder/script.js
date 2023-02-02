@@ -13,30 +13,3 @@
 //     a.print();
 // }
 
-
-// Get the div element that you want to download
-var div = document.getElementById("resume");
-
-// Get the styles for the div, including any CSS styles
-var styles = window.getComputedStyle(div);
-
-// Create a new element to hold the div's content
-var newDiv = document.createElement("div");
-newDiv.innerHTML = div.innerHTML;
-
-// Add the styles to the new element
-newDiv.style.cssText = styles.cssText;
-
-// Create a link for the external css file
-var css = document.createElement("link");
-css.href = "./style.css";
-css.rel = "stylesheet";
-
-// Append the link to the head of the newDiv
-newDiv.appendChild(css);
-
-// Use a library like jsPDF to convert the div to a PDF
-var pdf = new jsPDF();
-pdf.addHTML(newDiv, function() {
-    pdf.save("myDiv.pdf");
-});
