@@ -1,7 +1,7 @@
 // For loop
 
 for (let i = 0; i < 5; i++) {
-    if(i === 2) break;
+    if(i === 2) break; // using break keyword
     console.log("For Loop : ",i)
 }
 
@@ -16,6 +16,6 @@ for (let i of array) {
 
 for (let i in array) {
     // console.log(typeof i)  // string
-    if(i == 2) continue;
+    if(i == 2) continue; // using continue keyword
     console.log("For in Loop",i)
 }
