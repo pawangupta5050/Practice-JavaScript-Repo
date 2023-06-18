@@ -24,7 +24,7 @@ arrowFunc()
 
 const arrowFunc2 = (para1, para2) => { // For multiple Statements
     const output = para1 + para2;
-    console.log(output); 
+    console.log(output);
 }
 
 arrowFunc2(56, 18)
