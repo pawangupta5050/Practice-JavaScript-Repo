@@ -28,3 +28,20 @@ const arrowFunc2 = (para1, para2) => { // For multiple Statements
 }
 
 arrowFunc2(56, 18)
+
+// Function Scope and Block Scope
+
+{
+    let blockScope1 = 'Hello, world 1';
+    const blockScope2 = 'Hello, world 2';
+    var blockScope3 = 'Hello, world 3';
+}
+
+// console.log(blockScope1, blockScope2, blockScope3) // let & const are not accessible outside the block, and var is accessible
+
+
+const funScope = () => {
+    var FunctionScope = 'Hello'
+}
+
+// console.log(FunctionScope) // Var are not accessible outside the function
