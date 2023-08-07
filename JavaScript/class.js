@@ -1,4 +1,4 @@
-// new keyword - it creates an empty object i.e this, and takes the reference and sets it into __proto__ or [[prototype]]
+// new keyword - it creates an empty object i.e this, and takes the reference and sets function Prototype (Object) into __proto__ or [[prototype]]
 // new keyword - it creates an Instance of an Object or a function for which it is called 
 
 const newFunction = function(name, age) {
@@ -39,6 +39,8 @@ class empData {
 
 const emp1 = new empData("Pawan", "QC", 15, 185254649)
 
+console.log(emp1.isDeveloper())
+console.log(emp1.isAdult())
 console.log(emp1.mobileNumber())
 
 class newClass extends empData { // Inheritance from parent class
