@@ -14,6 +14,6 @@ const string = boolean.toString()
 console.log(typeof string)
 console.log(typeof bigInt)
 
-let templateString = `My Id is ${number}`;
+let templateString = `My Id is ${number}`; //Example of template string
 
 console.log(templateString)

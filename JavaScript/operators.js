@@ -9,9 +9,9 @@ console.log(value2 == value3);
 console.log(value2 === value3);
 console.log(value2 != value3);
 console.log(value2 !== value3);
-console.log(value2 !== value3);
 
 // Ternary Operators
+// Truthy and Falsy Values
 
 const ternaryOperator = undefined ? 'True' : 'False';
 const ternaryOperator1 = null ? 'True' : 'False';

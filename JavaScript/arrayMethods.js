@@ -2,7 +2,7 @@
 
 const array = ["Pawan", 1, 2, "Rahul"]
 
-const forEachMethod = array.forEach( (element, index) => {
+const forEachMethod = array.forEach((element, index) => {
     console.log("For Each Method : ",element, index)
     // return element
 })
@@ -34,27 +34,44 @@ console.log(filterMethod)
 
 const array3 = [1,2,3,4,5,6,7,8,9,10]
 
-const reduceMethod = array2.reduce( (accumulator,current) => {
+const reduceMethod = array3.reduce( (accumulator,current) => {
     const result = accumulator + current
     return result;
 })
 
 console.log(reduceMethod)
 
+
+// How it works with reduce methods
+// [1,2,3,4,5,6,7,8,9,10] // Suppose this is the array
+// accumulator  currrent  returns
+//    1           2         3 --- 1 It is the first element (Accumulator) and  2 is the second element (Currrent)
+//    3           3         6 --- Now here the returned value above "3" becomes the new accumulator and next value of an array "3" becomes the current value
+//    6           4         10 --- Now here the returned value above "6" becomes the new accumulator and next value of an array "4" becomes the current value
+//    10          5         15 --- Now here the returned value above "10" becomes the new accumulator and next value of an array "5" becomes the current value
+//    15          6         21 --- Now here the returned value above "15" becomes the new accumulator and next value of an array "6" becomes the current value
+//    21          7         28 --- Now here the returned value above "21" becomes the new accumulator and next value of an array "7" becomes the current value
+//    28          8         36 --- Now here the returned value above "28" becomes the new accumulator and next value of an array "8" becomes the current value
+//    36          9         45 --- Now here the returned value above "36" becomes the new accumulator and next value of an array "9" becomes the current value
+//    45          10        55 --- Now here the returned value above "45" becomes the new accumulator and next value of an array "10" becomes the current value
+
+//  then it returns the final value of the Returned as "55"
+
+
 // Reduce Method Example - Suppose Shopping cart products and the Total Amount
 
 const shoppingCart = [
     {
         productName : 'iPhone 12 Pro',
-        price : 120000
+        price : 120000,
     },
     {
         productName : 'iPod',
-        price : 20000
+        price : 20000,
     },
     {
         productName : 'Charger',
-        price : 5000
+        price : 5000,
     }
 ]
 

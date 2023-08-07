@@ -50,7 +50,7 @@ const arrayOfObject = [
 ]
 
 
-const [,,{name, age}] = arrayOfObject
+const [,,{name, age}] = arrayOfObject // Nestes Object Destructuring
 
 for (let i of arrayOfObject) {
     console.log(i.name, i.age, i["hobby of pawan"])
@@ -66,3 +66,12 @@ while (i <= arrayForLoop.length) {
     console.log(i);
     i++;
 }
+
+
+// Spread operators using a string
+
+const string = 'Pawan Gupta'
+
+const [...stringName] = string 
+
+console.log(stringName)

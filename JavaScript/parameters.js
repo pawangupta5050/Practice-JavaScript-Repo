@@ -42,3 +42,14 @@ const destructuringFunction = (object, array) => {
 
 destructuringFunction(object, array)
 
+// Callback function
+
+const callback = () => {
+    console.log("I'm a callback function")
+}
+
+const parentFunction = (callback) => {
+    callback();
+}
+
+parentFunction(callback);
