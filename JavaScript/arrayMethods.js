@@ -134,3 +134,19 @@ const someMethod = array7.some( (e) => {
 
 console.log("The Some Method returns ", someMethod)
 
+
+// Fill Method - It fills the array with a value that has been passed as an argument and removes the initial ones.
+
+const array8 = [1,2,3,4,5,6,7,8,9,10];
+
+const newFilledArray = array8.fill(0, 2, 5) // fill takes three arguments fill(The value wants to fill, the starting index, the ending index)
+
+console.log('The Fill Method is ',newFilledArray)
+
+// Splice - It is used to delete the initial element and insert the new element.
+
+const array9 = [1,2,3,4,5,6,7,8,9,10];
+
+array9.splice(5, 0, "Pawan") // Takes Three arguments splice(Starting Index, Index wanted to be deleted, The Element that will be inserted)
+
+console.log('The Splice Method is ',array9)

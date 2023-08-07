@@ -9,15 +9,28 @@ const object = {
     }
 }
 
+const callingObject = {
+    name : "Akash",
+    age : 18,
+}
+
 // call syntax  - objectName.fuctionName.call(objectName, "argument1", "argument2", "argumentN")
 
-object.about.call(object, "Akash", 18); // (Here this keyword refers to object) Calling a Function inside an object and passing the arguments
+object.about.call(callingObject, "Sunil", 24); // (Here this keyword refers to object) Calling a Function inside an object and passing the arguments
 
 // Apply - Same as call() : Difference is that it takes the arguments in an array
 
-object.about.apply(object, ["Raj", 28]) 
+object.about.apply(callingObject, ["Raj", 28]) 
 
 // Apply syntax - objectName.functionName.apply(objectName, ["argument1", "argument2", "argumentN"])
+
+// Bind - Same as call() and apply() : Difference is that it does not call the function instead it returns a new fuction that can be stored and called later
+
+const newBindFunc = object.about.bind(callingObject, "Mayuresh", 26); // This will return a new fuction 
+
+newBindFunc();
+
+// Bind Syntax - objectName.functionName.bind(objectName, "argument1", "argument2", "argumentN")
 
 // Object.assign() Method 
 
