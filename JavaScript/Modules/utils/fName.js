@@ -1,0 +1,1 @@
+export const firstName = 'Pawan' // Named Export

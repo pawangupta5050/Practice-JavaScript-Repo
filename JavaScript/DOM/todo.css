@@ -1,63 +1,165 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-:root{
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;700&family=Roboto:wght@300;400&display=swap');
 
-*{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
 body {
-    background-color: #ffffff;
+    font-family: 'Poppins', sans-serif;;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;   
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header {
     position: relative;
-    width: 100vw;
-    height: 96vh;
+    min-height: 60vh;
+    background: url('./bg-image.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
 
-header nav {
-    border: 1px solid #000;
-    /* text-align: center; */
+.logo-classList {
+    background-color: blue;
+    
+} 
+
+#nav {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; 
+    justify-content: space-between;
+    min-height: 8vh;
 }
 
-nav div {
-    background-color: blanchedalmond;
-    margin-left: 5px;
-    padding-left: 10px;
-    width: 100px;
-    height: 100px;
+.nav-items {
+    width: 40%;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.headline {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-headline {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    margin-top: 1rem;
+    font-weight: 700;
 }
 
 .main {
-    border: 1px solid rgb(197, 18, 18);
-    width: 100vw;
-    height: 70vh;
-    /* text-align: center; */
+    margin-top: 5rem;   
+    text-align: center;
+}
+
+.form {
+    height: 5vh;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; 
+    justify-content: space-between;
+    margin-top: 1rem;
 }
 
-main div {
-    background-color: blanchedalmond;
-    margin-left: 5px;
-    padding-left: 10px;
-    width: 400px;
-    height: 400px;
+.form input {
+    min-height: 100%;
+    
 }
 
+.form input[type="text"] {
+    width: 78%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    font-weight: 400;
+}
 
-.footer {
-    /* display: block; */
-    font-size: 1.6rem;
-    position: absolute;
-    bottom: 0;
-    left: 10;
+.form input[type="submit"] {
+    width: 20%;
+    background-color: rgb(44,55,63);
+    color: white;
+    font-weight: bold;
+}
+
+.todo-list {
+    text-align: left;
+    font-size: 1.2rem;
+    list-style-type: none;
+}
+
+.todo-list li {
+    padding: 0.7rem;
+    background-color: #444;
+    color: white;
+    margin-top: 1rem;
+    border-radius: 10px;
+    text-transform: capitalize;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-btn {
+    /* min-height: 100vh; */
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.signup {
+    margin-top: 5rem;
+    min-width: 800px;
+    text-align: center;
+    padding: 1rem;
+}
+
+.signup-form {
+    min-width: 800px;
+    width: 95%;
+    text-align: left;
+}
+
+.signup-form input {
+    display: block;
+    width: 80%;
+    padding: 0.6rem;
+}
+
+.signup-form label {
+    display: block;
+}
+
+.form-group {
+    margin-top: 1rem;
+}
+
+.form-group-btn {
+    background-color: rgb(44,55,63);
+    color: white;
+    padding: 1rem 2rem;
+    display: inline-block;
+    margin: 1rem auto;
 }

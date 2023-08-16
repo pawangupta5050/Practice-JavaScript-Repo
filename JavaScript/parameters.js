@@ -42,7 +42,7 @@ const destructuringFunction = (object, array) => {
 
 destructuringFunction(object, array)
 
-// Callback function
+// Callback function - The functions which are passed as an arguments to a function.
 
 const callback = () => {
     console.log("I'm a callback function")

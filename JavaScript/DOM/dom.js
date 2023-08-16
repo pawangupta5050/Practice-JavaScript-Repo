@@ -1,32 +1,33 @@
-const navItems = ["Logo", "Home", "About us", "Services", "Contact Us"]
-const idElement = document.getElementById("id") // Fetching the element through ID
-const classElement = document.getElementByClassName("class") // Fetching the element through Class
-const allClass = document.getElementsByClassName("allClasses") // Fetching all the elements of same class name
-const tagName = document.getElementByTagName("li") // Fetching 1st element of the same TagName 
-const allTags = document.getElementsByTagName("li") // Fetching all the elements of the same TagName
-const idSlector = document.querySelector('#idSelector')
-const classSelector = document.querySelector('.classSelector')
+// DOM - Document Object Model
+// The document object is present inside the Window object
+ 
+const idElement = document.getElementById("main-header"); // Fetching the element through ID
+const querySelection = document.querySelector('.logo'); // Fetching the selection through selectors (id, class, element, etc)
+const classElement = document.getElementsByClassName('form-group'); // Fetching the elements through class names it provides an array 
+// like object (HTMLCollections) which can be iterated through (For Loop, For of Loop, etc) and not with forEach method.
+const tagSelector = document.getElementsByTagName('a') // Fetching the elements through tag names it provides an array like object (HTMLCollections) 
+// which can be iterated through (For Loop, For of Loop, etc) and not with forEach method.
+const querySelectionAll = document.querySelectorAll('.nav-item'); // Fetching all selections through selectors (id or class), it provides an array 
+// like object (Nodelist) which can be iterated through (For Loop, For of Loop, forEach, etc)
 
-const block = document.querySelector('.main')
-console.log(block)
-const blocks = 1;
+const getAttributeEx = idElement.getAttribute('class') // It will return the "Class" attribute of the current element
+console.log(getAttributeEx);
 
-const nav = document.querySelector('#nav')
+querySelection.setAttribute('id', 'Logo') // It will set the "Id" attribut as "Logo" 
+console.log(querySelection);
 
-// nav.innerHTML = "<div>Hello</div>"
+idElement.style.backgroundColor = "Red"; // We can change the background color using "Style" object
+ 
+console.log(querySelection.textContent); // In this it displays the whole Text content which is present in the element
+console.log(querySelection.innerText); // It displays the Text content which is present on the webpage.
 
-navItems.map((e) => {
-    console.log(e)
-    nav.innerHTML += `<div><a >${e}</a></div>`
-})
+const divElement = document.getElementById('header');
 
-for (i = 1; i <= blocks; i++) {
-    block.innerHTML += `<div>${i}</div>`
-} 
+console.log(divElement.innerHTML) // In this it displays the whole elements which all are present inside the div.
 
-// console.log(blocks)
+// Changing the inner HTML of the div 
 
-console.log(block)
+divElement.innerHTML = "<h1>Text which is changed</h1>";
+divElement.innerHTML += "<button class='btn'>Submit</button>";
 
-console.log(nav)
-
+console.log(querySelectionAll);
