@@ -22,7 +22,7 @@ console.log(array2)
 
 const [arr1, arr2, ...arr3] = array1;
 
-console.log(arr1, arr2, arr3)
+console.log("Destructured Arrays Values - ", "Array1 - ",arr1, ", Array2 - ", arr2, ", Array3 - ", arr3)
 
 // Array Destructuring of Object
 
@@ -45,7 +45,7 @@ const arrayOfObject = [
     {
         name : 'Sunil',
         age : 8,
-        "hobby of pawan" : 'Dancing'
+        "Hobby of Sunil" : 'Dancing'
     },
 ]
 
@@ -53,7 +53,7 @@ const arrayOfObject = [
 const [,,{name, age}] = arrayOfObject // Nestes Object Destructuring
 
 for (let i of arrayOfObject) {
-    console.log(i.name, i.age, i["hobby of pawan"])
+    console.log(i.name, i.age, i.hobby,i["Hobby of Sunil"])
 }
 
 // While Loop in array 

@@ -1,6 +1,6 @@
 // Synchronous - single-threaded (One line of a code at a time, cant execute the next line before executing the first line)
 // Hoisting - The Assignment of Functions and Variables inside Global Scope before executing the code
-// Temporal Dead Zone (TDZ) - The time period between the Uninitialization to Initialization of the variable. (when and variable is initialized)
+// Temporal Dead Zone (TDZ) - The time period between the Uninitialization to Initialization of the variable. (when an variable is initialized)
 // Call Stack - The stack where the Execution Context are stored on one above the other
 // Lexical Scope - The variable or a function which is inside another function can access the variables inside the function
 //  but can also access the variables outside the function, so now it is called as the inner function is lexically present inside the outer function
@@ -17,7 +17,7 @@
 // then ...
 console.log(this); // prints the window object that gets reference of Window object
 // console.log(window); // prints the window object that contains lots of methods
-console.log(funct); // prints Undefined as it is not yet declared 
+console.log(funct); // prints the whole function as it is.
 funct();
 console.log(fullname); // prints Undefined as it is not yet declared 
 
